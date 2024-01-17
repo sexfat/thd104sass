@@ -1,12 +1,19 @@
-$fontSize : 16px; 
+$fontSize : 16px;  //數值
 $bgc : #333;
-$color : #fff;
+$color : #fff; // 顏色
+$bold :false ; // 布林值
+$fontFamily : Arial, Helvetica, sans-serif; //字串
+
+/*css 註解 */
 
 body {
    font-size: $fontSize;
    padding: 0;
    margin: 10px;
-   font-weight: 400;
+   @if $bold {
+    font-weight: 800;    
+   }
    color: $color;
+   font-family: $fontFamily;
    background-color: $bgc;
 }
