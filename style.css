@@ -1,5 +1,44 @@
 @charset "UTF-8";
 /*css 註解 */
+header {
+  height: 300px;
+  display: flex;
+}
+header .logo {
+  width: 80px;
+  height: 80px;
+  background-color: blue;
+}
+header .logo h1 {
+  font-size: 12px;
+  color: #fff;
+}
+header nav {
+  width: 100%;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav ul li {
+  width: 150px;
+  background-color: #02ff63;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+header nav ul li:hover {
+  background-color: #199400;
+}
+header nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-size: 16px;
   padding: 0;
@@ -25,32 +64,5 @@ h2 {
 }
 
 .wrapper {
-  width: 1200px;
-  margin: 0 auto;
-}
-.wrapper header {
-  height: 300px;
-  display: flex;
-}
-.wrapper header .logo {
-  width: 80px;
-  height: 80px;
-  background-color: blue;
-}
-.wrapper header .logo h1 {
-  font-size: 12px;
-  color: #fff;
-}
-.wrapper header nav {
   width: 100%;
-}
-.wrapper header nav ul {
-  list-style: none;
-  display: flex;
-}
-.wrapper header nav ul li {
-  width: 150px;
-  padding: 10px 20px;
-  background-color: #02ff63;
-  margin: 0 10px;
 }/*# sourceMappingURL=style.css.map */
