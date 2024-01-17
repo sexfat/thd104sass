@@ -1,3 +1,12 @@
+$fontSize : 16px; 
+$bgc : #333;
+$color : #fff;
+
 body {
-   font-size: 16px;
+   font-size: $fontSize;
+   padding: 0;
+   margin: 10px;
+   font-weight: 400;
+   color: $color;
+   background-color: $bgc;
 }
