@@ -1,19 +1,31 @@
 $fontSize : 16px;  //數值
 $bgc : #333;
+$bgc : #ff0000 !default;
 $color : #fff; // 顏色
 $bold :false ; // 布林值
 $fontFamily : Arial, Helvetica, sans-serif; //字串
+$margin : 10px 20px 10px 30px; // list
+$title :(
+  h1 : 40px,
+  h2 : 30px
+); //map
+
+$null : null;
 
 /*css 註解 */
 
 body {
    font-size: $fontSize;
    padding: 0;
-   margin: 10px;
+   margin: $margin;
    @if $bold {
     font-weight: 800;    
    }
    color: $color;
    font-family: $fontFamily;
    background-color: $bgc;
+}
+
+h1 {
+  font-size:  map-get($title, h1);
 }
