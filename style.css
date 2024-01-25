@@ -47,16 +47,19 @@
 }
 
 .btn_ghost {
-  width: 190px;
+  width: 100%;
   border-radius: 10px;
   padding: 10px;
   color: #000;
   font-size: 14px;
   text-align: center;
   cursor: pointer;
+  background-color: #02ff63;
+  transition: 0.3s all ease;
+  background-color: initial;
 }
 .btn_ghost:hover {
-  background-color: #919191;
+  background-color: #00ce4f;
 }
 
 header {
@@ -124,17 +127,38 @@ header {
   width: 100%;
 }
 
-.banner {
-  width: 100%;
-}
-.banner .slider {
-  height: 400px;
-  background-color: #4400fe;
-}
-
 .box {
   width: 200px;
   height: 300px;
   border-radius: 5px;
   background-color: #444;
+}
+
+.banner {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 996px) {
+  .banner {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .banner {
+    width: 100%;
+  }
+}
+.banner .slider {
+  height: 400px;
+  background-color: #4400fe;
+}
+@media screen and (max-width: 996px) {
+  .banner .slider {
+    background-color: #00ff73;
+  }
+}
+@media screen and (max-width: 576px) {
+  .banner .slider {
+    background-color: #ff008c;
+  }
 }/*# sourceMappingURL=style.css.map */

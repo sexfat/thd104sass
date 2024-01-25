@@ -27,17 +27,7 @@
     background-color: initial;
 }
 
-
 .btn_ghost {
-    @include rect(190px , null , 10px);
-    padding: 10px;
-    color: #000;
-    font-size: 14px;
-    // border: 1px solid #c1c1c1;
-    text-align: center;
-    cursor: pointer;
-    // background-color: #c1c1c1;
-    &:hover {
-       background-color: #919191;
-    }
+    @include btn(100% , #02ff63 , 10px);
+    background-color: initial;  
 }

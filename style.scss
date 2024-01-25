@@ -87,13 +87,6 @@ header {
 }
 
 
-.banner {
-   @include layout(100);
-   .slider {
-      height: 400px;
-      background-color: #4400fe;
-   }  
-}
 
 
 .box {
@@ -101,7 +94,51 @@ header {
   background-color: #444;    
 }
 
+// === 桌機
+.banner {
+    @include layout(1200);
+    @include t(){
+        @include layout(100);
+    }
+    @include m(){
+        @include layout(100);
+    }
+    .slider {
+       height: 400px;
+       background-color: #4400fe;
+       @include t(){
+        background-color: #00ff73;
+       }
+       @include m(){
+        background-color: #ff008c;
+       }
+    }  
+ }
+ 
 
+
+
+
+
+
+
+ 
+   
+
+
+// // 手機
+// @media screen and (max-width: 576px) {
+//       // ====
+
+//       .banner {
+//         @include layout(100);
+//         .slider {
+//            height: 400px;
+//            background-color: #ff008c;
+//         }  
+//      }
+   
+// }
 
 
 

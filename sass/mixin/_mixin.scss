@@ -21,3 +21,20 @@
        margin: auto;
      }
  }
+
+
+ // 平板
+ @mixin t(){
+    @media screen and (max-width: $t) {
+        // 內容
+        @content;
+    }
+ }
+
+ //手機
+ @mixin m(){
+    @media screen and (max-width: $m) {
+        // 內容
+        @content;
+    }
+ }
