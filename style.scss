@@ -57,10 +57,10 @@ h2 {
 
 $layout_name : "container";
 
-.#{$layout_name} {
-    width: 1200px;
-    margin: auto;
-}
+// .#{$layout_name} {
+//     width: 1200px;
+//     margin: auto;
+// }
 
 
 // =====================Nesting============================ //
@@ -119,6 +119,15 @@ $layout_name : "container";
 
 header {
    @include layout(100)
+}
+
+
+.banner {
+   @include layout(100);
+   .slider {
+      height: 400px;
+      background-color: #4400fe;
+   }  
 }
 
 
