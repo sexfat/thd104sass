@@ -65,4 +65,37 @@ h2 {
 
 .wrapper {
   width: 100%;
+}
+.wrapper h1 {
+  font-size: 40px;
+}
+.wrapper h2 {
+  font-size: 30px;
+}
+
+.box {
+  width: 400px;
+  height: 80px;
+  background-color: #e02d2d;
+}
+
+.box_1 {
+  width: 400px;
+  height: 80px;
+  background-color: #333;
+}
+
+.box_3 {
+  width: 400px;
+  height: 80px;
+  background-color: #999;
+}
+
+.w {
+  width: 400px;
+  height: 150px;
+}
+
+header {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -1,22 +1,16 @@
-$fontSize : 16px; //數值
-$bgc : #333;
-$bgc : #ff0000 !default;
-$color : #fff; // 顏色
-$bold :false; // 布林值
-$fontFamily : Arial,
-Helvetica,
-sans-serif; //字串
-$margin : 10px 20px 10px 30px; // list
-$title :(h1 : 40px,
-    h2 : 30px); //map
 
-$null : null;
 
 /*css 註解 */
 
 
-// @import url();
-@import "sass/layout/header";
+// @import url();  css  
+@import "sass/base/var"; // sass
+@import "sass/base/color"; // sass
+@import "sass/base/font"; // sass
+@import "sass/layout/header"; // sass
+@import "sass/layout/footer"; // sass
+// @import "sass/layout/header"; // sass
+// @import "sass/layout/header"; // sass
 
 
 
@@ -73,4 +67,71 @@ $layout_name : "container";
 
 .wrapper {
     width: 100%;
+    h1 {
+      font-size: 40px;  
+    }
+    h2 {
+        font-size: 30px;  
+      }
 }
+
+// ======   mixin  =======
+
+@mixin rect {
+    width: 400px;
+    height: 80px;
+}
+
+.box {
+   @include rect();
+   background-color: #e02d2d;
+}
+
+.box_1 {
+    @include rect();
+    background-color: #333
+}
+
+.box_3{
+    @include rect();
+    background-color: #999;
+}
+
+// 有變數
+@mixin rect_var($w , $h){
+   width: $w;
+   height: $h;
+}
+
+
+.w {
+  @include rect_var(400px, 150px)
+}
+
+@mixin layout($w){
+   @if $w == 100 {
+      width: 100%;
+    }@else {
+      width: $w + px;
+      margin: auto;
+    }
+}
+
+header {
+   @include layout(100)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
