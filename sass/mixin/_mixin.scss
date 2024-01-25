@@ -1,0 +1,23 @@
+// == 固定寬 
+@mixin rect_fixed() {
+    width: 400px;
+    height: 80px;
+}
+
+
+// 有變數
+@mixin rect($w, $h ,$border_radius:null){
+    width: $w;
+    height: $h;
+    border-radius: $border_radius;
+ }
+
+// layout   
+@mixin layout($w){
+    @if $w == 100 {
+       width: 100%;
+     }@else {
+       width: $w + px;
+       margin: auto;
+     }
+ }
