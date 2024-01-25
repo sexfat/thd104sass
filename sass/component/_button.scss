@@ -1,11 +1,12 @@
-@mixin btn($w , $bgc){
-    @include rect($w , null , null);
+@mixin btn($w , $bgc ,$border_radius:null){
+    @include rect($w , null , $border_radius);
     padding: 10px;
     color: #000;
     font-size: 14px;
     text-align: center;
     cursor: pointer;  
     background-color: $bgc;
+    transition: .3s all ease;
     &:hover {
         background-color: darken($bgc, 10);
      }
@@ -13,34 +14,17 @@
 
 
 .btn {
-  @include btn(100%, #6fff00)
+  @include btn(180px, #00fff2)
 }
 
 .btn_round {
-    @include rect(190px , null , 30px);
-    padding: 10px;
-    color: #000;
-    font-size: 14px;
-    text-align: center;
-    cursor: pointer;
-    background-color: #c1c1c1;
-    &:hover {
-       background-color: #919191;
-    }
+    @include btn(100%, #6fff00 , 30px)
 }
 
 .btn_outline {
-    @include rect(190px , null , 10px);
-    padding: 10px;
-    color: #000;
-    font-size: 14px;
-    border: 1px solid #c1c1c1;
-    text-align: center;
-    cursor: pointer;
-    // background-color: #c1c1c1;
-    &:hover {
-       background-color: #919191;
-    }
+    @include btn(100% , #02ff63 , 5px);
+    border: 1px solid #02ff63;
+    background-color: initial;
 }
 
 
