@@ -1,5 +1,32 @@
 @charset "UTF-8";
 /*css 註解 */
+.btn {
+  width: 190px;
+  padding: 10px;
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #c1c1c1;
+}
+.btn:hover {
+  background-color: #919191;
+}
+
+.btn_round {
+  width: 190px;
+  border-radius: 30px;
+  padding: 10px;
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #c1c1c1;
+}
+.btn_round:hover {
+  background-color: #919191;
+}
+
 header {
   display: flex;
 }

@@ -1,0 +1,28 @@
+
+
+.btn {
+   @include rect(190px , null , null);
+   padding: 10px;
+   color: #000;
+   font-size: 14px;
+   text-align: center;
+   cursor: pointer;
+   background-color: #c1c1c1;
+   &:hover {
+      background-color: #919191;
+   }
+}
+
+.btn_round {
+    @include rect(190px , null , 30px);
+    padding: 10px;
+    color: #000;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #c1c1c1;
+    &:hover {
+       background-color: #919191;
+    }
+}
+
