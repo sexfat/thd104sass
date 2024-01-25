@@ -7,10 +7,10 @@
   font-size: 14px;
   text-align: center;
   cursor: pointer;
-  background-color: #ff0000;
+  background-color: #6fff00;
 }
 .btn:hover {
-  background-color: #cc0000;
+  background-color: #59cc00;
 }
 
 .btn_round {
