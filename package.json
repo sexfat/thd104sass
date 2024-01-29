@@ -2,14 +2,23 @@
   "name": "thd104sass",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sexfat/thd104sass.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^5.3.2"
+  "bugs": {
+    "url": "https://github.com/sexfat/thd104sass/issues"
+  },
+  "homepage": "https://github.com/sexfat/thd104sass#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0"
   }
 }
