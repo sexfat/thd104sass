@@ -1405,4 +1405,46 @@ h1 {
 
 .top_100 {
   margin-top: 100px;
+}
+
+.slider-s1 {
+  background-image: url("images/s1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-s2 {
+  background-image: url("images/s2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-s3 {
+  background-image: url("images/s3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-s4 {
+  background-image: url("images/s4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-b1 {
+  background-image: url("images/b1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-c1 {
+  background-image: url("images/c1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }/*# sourceMappingURL=style.css.map */

@@ -132,18 +132,19 @@ h1 {
     font-size: 50px;
     color: #000;
     text-align: center;
-
-
 }
-
-// @for $i from 1 through 100 {
-//    .space_#{$i} {
-//       margin-top : $i * 1px
-//    }
-// } 
-
-
 
 
 @include space(100 , right);
-@include space(100 , top)
+@include space(100 , top);
+
+$list : s1 s2 s3 s4 b1 c1;
+
+@each $i in $list {
+.slider-#{$i} {
+   background-image: url('images/#{$i}.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+  }
+}
