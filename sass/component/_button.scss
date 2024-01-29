@@ -1,16 +1,4 @@
-@mixin btn($w , $bgc ,$border_radius:null){
-    @include rect($w , null , $border_radius);
-    padding: 10px;
-    color: #000;
-    font-size: 14px;
-    text-align: center;
-    cursor: pointer;  
-    background-color: $bgc;
-    transition: .3s all ease;
-    &:hover {
-        background-color: darken($bgc, 10);
-     }
-}
+
 
 
 .btn {

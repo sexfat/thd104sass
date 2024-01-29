@@ -1,5 +1,59 @@
 @charset "UTF-8";
 /*css 註解 */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 .btn {
   width: 180px;
   padding: 10px;
@@ -62,6 +116,24 @@
   background-color: #00ce4f;
 }
 
+.round {
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #ff2323;
+}
+@media screen and (max-width: 896px) {
+  .round {
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+
+.boxround {
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+}
+
 header {
   display: flex;
 }
@@ -96,6 +168,35 @@ header nav ul li a {
   text-decoration: none;
 }
 
+.banner {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 896px) {
+  .banner {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .banner {
+    width: 100%;
+  }
+}
+.banner .slider {
+  height: 400px;
+  background-color: #4400fe;
+}
+@media screen and (max-width: 896px) {
+  .banner .slider {
+    background-color: #00ff73;
+  }
+}
+@media screen and (max-width: 450px) {
+  .banner .slider {
+    background-color: #ff008c;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -109,21 +210,7 @@ body {
   background-color: #ffffff;
 }
 
-h1 {
-  font-size: 40px;
-  color: #444;
-}
-
-h2 {
-  font-size: 30px;
-  color: #444;
-}
-
 .wrapper {
-  width: 100%;
-}
-
-header {
   width: 100%;
 }
 
@@ -134,31 +221,6 @@ header {
   background-color: #444;
 }
 
-.banner {
-  width: 1200px;
-  margin: auto;
-}
-@media screen and (max-width: 996px) {
-  .banner {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 576px) {
-  .banner {
-    width: 100%;
-  }
-}
-.banner .slider {
-  height: 400px;
-  background-color: #4400fe;
-}
-@media screen and (max-width: 996px) {
-  .banner .slider {
-    background-color: #00ff73;
-  }
-}
-@media screen and (max-width: 576px) {
-  .banner .slider {
-    background-color: #ff008c;
-  }
+.wrapper {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

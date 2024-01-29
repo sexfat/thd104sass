@@ -1,4 +1,19 @@
 .banner {
-   // ======  輪撥圖 
-
+   @include layout(1200);
+   @include t(){
+       @include layout(100);
+   }
+   @include m(){
+       @include layout(100);
+   }
+   .slider {
+      height: 400px;
+      background-color: #4400fe;
+      @include t(){
+       background-color: #00ff73;
+      }
+      @include m(){
+       background-color: #ff008c;
+      }
+   }  
 }

@@ -1,26 +1,36 @@
-
+@use 'sass:math';
 
 /*css 註解 */
-
-
 // @import url();  css  
 // var 
 @import "sass/base/var"; // sass
 @import "sass/base/color"; // sass
 @import "sass/base/font"; // sass
+@import "sass/base/reset"; // sass
 
 // mixin
-@import  "sass/mixin/mixin";
+@import "sass/mixin/mixin";
 
 // component
 
 @import "sass/component/button";
+@import "sass/component/card";
+@import "sass/component/form";
+@import "sass/component/radius";
 
 // ===  layout
 @import "sass/layout/header"; // sass
 @import "sass/layout/footer"; // sass
+@import "sass/layout/banner"; // sass
 // @import "sass/layout/header"; // sass
 // @import "sass/layout/header"; // sass
+
+
+// === page =
+@import "sass/page/index";
+@import "sass/page/about";
+
+
 
 
 
@@ -36,8 +46,6 @@
 
 * {
     box-sizing: border-box;
-
-
 }
 
 body {
@@ -54,16 +62,7 @@ body {
     background-color: $bgc;
 }
 
-h1 {
-    $colorh1: #444 !global; // 區域變數  
-    font-size: map-get($title, h1);
-    color: $colorh1;
-}
 
-h2 {
-    font-size: map-get($title, h2);
-    color: $colorh1;
-}
 
 $layout_name : "container";
 
@@ -79,81 +78,40 @@ $layout_name : "container";
     width: 100%;
 }
 
-// ======   mixin  =======
-
-
-header {
-   @include layout(100)
-}
-
-
-
 
 .box {
-  @include rect(200px,300px , 5px);
-  background-color: #444;    
+    @include rect(200px, 300px, 5px);
+    background-color: #444;
 }
 
-// === 桌機
-.banner {
-    @include layout(1200);
-    @include t(){
-        @include layout(100);
-    }
-    @include m(){
-        @include layout(100);
-    }
-    .slider {
-       height: 400px;
-       background-color: #4400fe;
-       @include t(){
-        background-color: #00ff73;
-       }
-       @include m(){
-        background-color: #ff008c;
-       }
-    }  
- }
- 
 
-
-
-
-
-
-
- 
-   
-
-
-// // 手機
-// @media screen and (max-width: 576px) {
-//       // ====
-
-//       .banner {
-//         @include layout(100);
-//         .slider {
-//            height: 400px;
-//            background-color: #ff008c;
-//         }  
-//      }
-   
+// .inter {
+//   width: 100em + 10;
+//   height: 100px - 10;
+//   margin:  10 * 10 + px;
+//   //font : (100px / 10);
 // }
 
+$vars : black;
 
+@if $vars==yellow {
+    .theme-yellow {
+        background-color: yellow;
+    }
+}
 
+@mixin layout($layout , $class:'div') {
+    #{$class} {
+        @if $layout <= 100 {
+            width: $layout * 1%;
+        }
 
+        @else {
+            width: $layout + px;
+            margin: 0 auto;
+        }
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//  100 值　　class
+@include layout(100 , '.wrapper')
