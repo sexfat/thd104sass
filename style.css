@@ -1460,4 +1460,44 @@ h4 {
 
 .title_h2 {
   font-size: 50px;
+}
+
+.primary {
+  background-color: #5188F6;
+}
+
+.primary {
+  color: #5188F6;
+}
+
+.secondary {
+  background-color: #9B5AF6;
+}
+
+.secondary {
+  color: #9B5AF6;
+}
+
+.success {
+  background-color: #22C55E;
+}
+
+.success {
+  color: #22C55E;
+}
+
+.black {
+  background-color: #272727;
+}
+
+.black {
+  color: #272727;
+}
+
+body {
+  background-color: #000;
+}
+
+body {
+  color: #000;
 }/*# sourceMappingURL=style.css.map */

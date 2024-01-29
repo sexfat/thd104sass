@@ -155,13 +155,32 @@ $map :(
   h4 : 26px,
   '.title_h1' : 60px,
   '.title_h2' : 50px,
-);
+); // map
 
 @each $k , $v in $map {
    #{$k} {
        font-size: $v;
    }   
 }
+
+$colors : (
+ '.primary' : #5188F6,
+ '.secondary' : #9B5AF6,
+ '.success' : #22C55E,
+ '.black' : #272727,
+ body :  #000
+); 
+
+
+
+@each $k , $v in $colors {
+ #{$k} {
+     background-color: $v;
+ } 
+ #{$k} {
+    color : $v
+ }
+} 
 
 
 
