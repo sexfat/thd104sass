@@ -6,62 +6,96 @@
 
 
 // 有變數
-@mixin rect($w, $h ,$border_radius:null){
+@mixin rect($w, $h, $border_radius:null) {
     width: $w;
     height: $h;
     border-radius: $border_radius;
- }
+}
 
 // layout   
-@mixin layout($w){
-    @if $w == 100 {
-       width: 100%;
-     }@else {
-       width: $w + px;
-       margin: auto;
-     }
- }
+@mixin layout($w) {
+    @if $w==100 {
+        width: 100%;
+    }
+
+    @else {
+        width: $w + px;
+        margin: auto;
+    }
+}
 
 
- // btn mixin
- @mixin btn($w , $bgc ,$border_radius:null){
-    @include rect($w , null , $border_radius);
+// btn mixin
+@mixin btn($w, $bgc, $border_radius:null) {
+    @include rect($w, null, $border_radius);
     padding: 10px;
     color: #000;
     font-size: 14px;
     text-align: center;
-    cursor: pointer;  
+    cursor: pointer;
     background-color: $bgc;
     transition: .3s all ease;
+
     &:hover {
         background-color: darken($bgc, 10);
-     }
+    }
 }
 
 
- // 平板
- @mixin t(){
+// 平板
+@mixin t() {
     @media screen and (max-width: $t) {
         // 內容
         @content;
     }
- }
+}
 
- //手機
- @mixin m(){
+//手機
+@mixin m() {
     @media screen and (max-width: $m) {
         // 內容
         @content;
     }
- }
+}
 
 // 空間
- @mixin space($s , $d: top) {
-
+@mixin space($s, $d: top) {
     @for $i from 1 through $s {
-        .#{$d}_#{$i}{
+        .#{$d}_#{$i} {
             // position: relative;
-            margin-#{$d} : $i + px; 
+            margin-#{$d}: $i + px;
         }
     }
 }
+
+
+.h {
+    background-color: #fc9292;
+    height: 300px;
+}
+
+.w {
+    background-color: #92fca5;
+    height: 300px;
+}
+
+// grid system
+
+@mixin grid($col) {
+    @for $i from 1 through $col {
+        .col-#{$i} {
+            width: ($i / $col) * 100%;
+        }
+    }
+}
+
+
+@mixin grids($col , $d) {
+    @for $i from 1 through $col {
+        .col-#{$d}-#{$i} {
+            width: ($i / $col) * 100%;
+        }
+    }
+}
+
+@include grid(12)
