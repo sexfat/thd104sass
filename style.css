@@ -1432,4 +1432,32 @@ h1 {
   background-size: cover;
   width: 1200px;
   margin: 0 auto;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+div {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 26px;
+}
+
+.title_h1 {
+  font-size: 60px;
+}
+
+.title_h2 {
+  font-size: 50px;
 }/*# sourceMappingURL=style.css.map */

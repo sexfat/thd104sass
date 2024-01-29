@@ -140,16 +140,30 @@ h1 {
 
 //$list : s1 s2 s3 s4 b1 c1; // list
 
-@mixin slider($list , $w: 100) {
-    @each $i in $list {
-        .slider-#{$i} {
-            background-image: url('assets/images/#{$i}.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            @include layout($w)
-        }
-    }
+
+@include slider(s1 s2 s3 s4 , 1200);  //list
+
+
+
+// @each  map
+
+$map :(
+  h1 : 40px,
+  h2 : 36px,
+  h3 : 30px,
+  div : 16px,
+  h4 : 26px,
+  '.title_h1' : 60px,
+  '.title_h2' : 50px,
+);
+
+@each $k , $v in $map {
+   #{$k} {
+       font-size: $v;
+   }   
 }
 
 
-@include slider(s1 s2 s3 s4 , 1200)  //list
+
+
+

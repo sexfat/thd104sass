@@ -98,4 +98,25 @@
     }
 }
 
-@include grid(12)
+@include grid(12);
+
+
+// ==============     slider ===============
+// 背景圖片　
+// @include slider(a1 a2 a3 , 圖片寬度)
+//==========================================
+
+@mixin slider($list , $w: 100) {
+    @each $i in $list {
+        .slider-#{$i} {
+            background-image: url('assets/images/#{$i}.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            @include layout($w)
+        }
+    }
+}
+
+
+
+
