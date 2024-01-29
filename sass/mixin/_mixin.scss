@@ -54,3 +54,14 @@
         @content;
     }
  }
+
+// 空間
+ @mixin space($s , $d: top) {
+
+    @for $i from 1 through $s {
+        .#{$d}_#{$i}{
+            // position: relative;
+            margin-#{$d} : $i + px; 
+        }
+    }
+}

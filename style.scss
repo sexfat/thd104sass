@@ -92,7 +92,7 @@ $layout_name : "container";
 //   //font : (100px / 10);
 // }
 
-$vars : black;
+$vars : yellow;
 
 @if $vars==yellow {
     .theme-yellow {
@@ -100,18 +100,49 @@ $vars : black;
     }
 }
 
-@mixin layout($layout , $class:'div') {
+@mixin layout($layout, $class:'div') {
     #{$class} {
-        @if $layout <= 100 {
+        @if $layout <=100 {
             width: $layout * 1%;
+            background-color: #ededed;
         }
 
         @else {
             width: $layout + px;
             margin: 0 auto;
+            background-color: #ededed;
         }
     }
 }
 
 //  100 值　　class
-@include layout(100 , '.wrapper')
+@include layout(100, '.wrapper');
+
+
+//迴圈
+
+@for $i from 1 through 10 {
+    .w_#{$i} {
+        width: $i * 1px;
+    }
+}
+
+h1 {
+    font-size: 50px;
+    color: #000;
+    text-align: center;
+
+
+}
+
+// @for $i from 1 through 100 {
+//    .space_#{$i} {
+//       margin-top : $i * 1px
+//    }
+// } 
+
+
+
+
+@include space(100 , right);
+@include space(100 , top)
